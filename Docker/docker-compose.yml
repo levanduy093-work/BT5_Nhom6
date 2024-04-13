@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  web:
+    build:
+      context: .  # Ngữ cảnh xây dựng là thư mục gốc của dự án
+      dockerfile: docker/Dockerfile  # Đường dẫn chính xác đến Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app:/app
